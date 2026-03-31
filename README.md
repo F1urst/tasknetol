@@ -41,7 +41,7 @@
 
 ```
 Поле для вставки кода...
-....
+....  (https://github.com/F1urst/tasknetol/blob/main/img/img11.png)
 ...  (https://raw.githubusercontent.com/F1urst/tasknetol/main/img/img11.png?raw=true)
 
 
