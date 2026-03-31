@@ -41,9 +41,8 @@
 ```
 Поле для вставки кода...
 ....
-....https://raw.githubusercontent.com/F1urst/tasknetol/main/img/Скриншот-31-03-2026-182716.png
+... https://raw.githubusercontent.com/F1urst/tasknetol/main/img/Скриншот-31-03-2026-182716.png
 
-```
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота 1](ссылка на скриншот 1)`
