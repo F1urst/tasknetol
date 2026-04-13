@@ -38,7 +38,7 @@
 
 
 ### Решение:
-
+```
 sudo apt install -y postgresql postgresql-contrib<br>
 wget https://repo.zabbix.com/zabbix/7.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.2-1+ubuntu24.04_all.deb<br>
 sudo dpkg -i zabbix-release_7.2-1+ubuntu24.04_all.deb<br>
@@ -47,7 +47,7 @@ sudo apt install -y zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-
 sudo -u postgres createuser --pwprompt zabbix<br>
 sudo -u postgres createdb -O zabbix zabbix<br>
 sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix<br>
-
+```
 
 `При необходимости прикрепитe сюда скриншоты`
 
@@ -76,19 +76,20 @@ sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbi
 ### Решение:
 
 
-
+```
 sudo apt install -y zabbix-agent<br>
 sudo sed -i 's/^Server=127.0.0.1/Server=10.0.2.15/' /etc/zabbix/zabbix_agentd.conf<br>
 sudo sed -i 's/^ServerActive=127.0.0.1/ServerActive=10.0.2.15/' /etc/zabbix/zabbix_agentd.conf<br>
 sudo systemctl restart zabbix-agent<br>
 sudo tail -f /var/log/zabbix/zabbix_agentd.log<br>
-
+```
 
 `При необходимости прикрепитe сюда скриншоты`
 
 ![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad21.jpg) <br>
 ![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad22.jpg) <br>
-![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad23.jpg) <br>
+![скрин](https://github.com/F1urst/tasknetol/blob/main/img/ubuntu.jpg) <br>
+![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zabb.jpg) <br>
 ---
 
 ### Задание 3
