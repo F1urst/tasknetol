@@ -36,22 +36,32 @@
 Приложите в файл README.md текст использованных команд в GitHub.
 `Приведите ответ в свободной форме........`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
 
-```
-Поле для вставки кода...
-.... 
+Решение:
+# 1. Установка PostgreSQL
+
+sudo apt install -y postgresql postgresql-contrib
+
+# 2. Добавление репозитория Zabbix
+wget https://repo.zabbix.com/zabbix/7.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.2-1+ubuntu24.04_all.deb
+sudo dpkg -i zabbix-release_7.2-1+ubuntu24.04_all.deb
+sudo apt update
+
+# 3. Установка Zabbix Server + Web + Agent
+sudo apt install -y zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+
+# 4. Создание БД и пользователя
+sudo -u postgres createuser --pwprompt zabbix
+sudo -u postgres createdb -O zabbix zabbix
+
+# 5. Импорт схемы
+sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
 
 
 `При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
 
 
+[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad11.jpg)
 ---
 
 ### Задание 2
@@ -72,20 +82,29 @@
 
 `Приведите ответ в свободной форме........`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. 
-```
-Поле для вставки кода...
-....
+Решение:
 
-....
-....
-```
+
+# Установка агента
+sudo apt install -y zabbix-agent
+
+# Настройка подключения к серверу (IP: 10.0.2.15)
+sudo sed -i 's/^Server=127.0.0.1/Server=10.0.2.15/' /etc/zabbix/zabbix_agentd.conf
+sudo sed -i 's/^ServerActive=127.0.0.1/ServerActive=10.0.2.15/' /etc/zabbix/zabbix_agentd.conf
+
+# Перезапуск агента
+sudo systemctl restart zabbix-agent
+
+
+# Просмотр лога
+sudo tail -f /var/log/zabbix/zabbix_agentd.log
+
 
 `При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
 
-
+[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad21.jpg)
+[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad22.jpg)
+[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad23.jpg)
 ---
 
 ### Задание 3
