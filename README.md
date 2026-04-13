@@ -34,7 +34,7 @@
 Требования к результатам
 Прикрепите в файл README.md скриншот авторизации в админке.
 Приложите в файл README.md текст использованных команд в GitHub.
-`Приведите ответ в свободной форме........`
+`Приведите ответ в свободной форме`
 
 
 ### Решение:
@@ -49,7 +49,7 @@ sudo -u postgres createdb -O zabbix zabbix<br>
 sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix<br>
 
 
-`При необходимости прикрепитe сюда скриншоты
+`При необходимости прикрепитe сюда скриншоты'
 
 
 [скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad11.jpg)
@@ -71,7 +71,7 @@ sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbi
 Приложите в файл README.md текст использованных команд в GitHub
 
 
-`Приведите ответ в свободной форме........`
+`Приведите ответ в свободной форме`
 
 ### Решение:
 
@@ -84,7 +84,7 @@ sudo systemctl restart zabbix-agent<br>
 sudo tail -f /var/log/zabbix/zabbix_agentd.log<br>
 
 
-`При необходимости прикрепитe сюда скриншоты
+`При необходимости прикрепитe сюда скриншоты'
 
 [скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad21.jpg) <br>
 [скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad22.jpg) <br>
