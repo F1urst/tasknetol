@@ -52,7 +52,7 @@ sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbi
 `При необходимости прикрепитe сюда скриншоты`
 
 
-[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad11.jpg)
+![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad11.jpg)
 ---
 
 ### Задание 2
@@ -86,9 +86,9 @@ sudo tail -f /var/log/zabbix/zabbix_agentd.log<br>
 
 `При необходимости прикрепитe сюда скриншоты`
 
-[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad21.jpg) <br>
-[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad22.jpg) <br>
-[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad23.jpg) <br>
+![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad21.jpg) <br>
+![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad22.jpg) <br>
+![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad23.jpg) <br>
 ---
 
 ### Задание 3
