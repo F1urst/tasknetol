@@ -52,7 +52,7 @@ sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbi
 `При необходимости прикрепитe сюда скриншоты`
 
 
-![скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad11.jpg)
+![скрин](https://github.com/F1urst/tasknetol/blob/main/img/teee.jpg)
 ---
 
 ### Задание 2
