@@ -37,7 +37,7 @@
 `Приведите ответ в свободной форме........`
 
 
-Решение:
+### Решение:
 
 sudo apt install -y postgresql postgresql-contrib<br>
 wget https://repo.zabbix.com/zabbix/7.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.2-1+ubuntu24.04_all.deb<br>
@@ -73,7 +73,7 @@ sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbi
 
 `Приведите ответ в свободной форме........`
 
-Решение:
+### Решение:
 
 
 
