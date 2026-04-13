@@ -86,9 +86,9 @@ sudo tail -f /var/log/zabbix/zabbix_agentd.log
 
 `При необходимости прикрепитe сюда скриншоты
 
-[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad21.jpg)
-[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad22.jpg)
-[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad23.jpg)
+[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad21.jpg) <br>
+[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad22.jpg) <br>
+[скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad23.jpg) <br>
 ---
 
 ### Задание 3
