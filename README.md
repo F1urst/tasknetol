@@ -49,7 +49,7 @@ sudo -u postgres createdb -O zabbix zabbix<br>
 sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix<br>
 
 
-`При необходимости прикрепитe сюда скриншоты'
+`При необходимости прикрепитe сюда скриншоты`
 
 
 [скрин](https://github.com/F1urst/tasknetol/blob/main/img/zad11.jpg)
