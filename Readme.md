@@ -23,3 +23,39 @@
 Установите и настройте HAProxy, воспользуйтесь материалами к лекции по ссылке
 Настройте балансировку Round-robin на 4 уровне.
 На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy.
+
+### Решение:
+```
+global
+    daemon
+    user haproxy
+    group haproxy
+
+defaults
+    mode tcp             
+    log global
+    option tcplog
+    timeout connect 5s
+    timeout client 50s
+    timeout server 50s
+
+listen stats
+    bind :8080         
+    mode http
+    stats enable
+    stats uri /stats
+    stats refresh 10s
+
+frontend http-in
+    bind *:80
+    mode tcp
+    default_backend web_servers
+
+backend web_servers
+    mode tcp
+    balance roundrobin     
+    server s1 127.0.0.1:8888 check
+    server s2 127.0.0.1:9999 check
+```
+
+`скрины`
