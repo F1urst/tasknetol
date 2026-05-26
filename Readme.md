@@ -69,3 +69,40 @@ backend web_servers
 Настройте балансировку Weighted Round Robin на 7 уровне, чтобы первый сервер имел вес 2, второй - 3, а третий - 4
 HAproxy должен балансировать только тот http-трафик, который адресован домену example.local
 На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy c использованием домена example.local и без него.
+
+### Решение:
+
+```
+global
+    daemon
+
+defaults
+    mode http                   
+    timeout connect 5s
+    timeout client 50s
+    timeout server 50s
+
+frontend web
+    bind *:80
+    mode http
+    
+    use_backend weighted_rr if { hdr(host) -i example.local }
+
+    http-request deny deny_status 403 if !{ hdr(host) -i example.local }
+
+backend weighted_rr
+    mode http
+    balance roundrobin          
+
+    server srv1 127.0.0.1:8001 weight 2 check
+    server srv2 127.0.0.1:8002 weight 3 check
+    server srv3 127.0.0.1:8003 weight 4 check
+```
+
+`скрины`
+
+![zq](https://github.com/F1urst/tasknetol/blob/main/img/zq1.jpg)
+![zq](https://github.com/F1urst/tasknetol/blob/main/img/zq2.jpg)
+![zq](https://github.com/F1urst/tasknetol/blob/main/img/zq3.jpg)
+![zq](https://github.com/F1urst/tasknetol/blob/main/img/zq4.jpg)
+
