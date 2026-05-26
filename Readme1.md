@@ -36,3 +36,5 @@
 На проверку направить файл crontab и скриншот с результатом работы утилиты.
 
 ### Решение:
+
+![aa](https://github.com/F1urst/tasknetol/blob/main/img/aa.jpg)
