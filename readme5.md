@@ -55,11 +55,11 @@ WHERE length > (SELECT AVG(length) FROM film);
 ### Решение
 ```
 SELECT 
-    DATE_TRUNC('month', payment_date) AS month,
+    TO_CHAR(payment_date, 'YYYY-MM') AS month,
     SUM(amount) AS total_payments,
     COUNT(rental_id) AS total_rentals
 FROM payment
-GROUP BY DATE_TRUNC('month', payment_date)
+GROUP BY TO_CHAR(payment_date, 'YYYY-MM')
 ORDER BY SUM(amount) DESC
 LIMIT 1;
 ```
