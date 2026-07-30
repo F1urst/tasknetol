@@ -98,4 +98,4 @@ CVE: CVE-2007-2447<br>
 - Трафик: Отправляются UDP-пакеты, так как этот протокол не использует рукопожатия .
 - Ответ сервера: Если порт закрыт, система часто возвращает ICMP-сообщение "Port Unreachable" (type 3, code 3). Открытый UDP-порт либо отвечает специфичными для службы данными, либо, при отсутствии ответа, считается open|filtered
 
-[!](https://github.com/F1urst/tasknetol/blob/main/img/шарк.jpg)
+![z](https://github.com/F1urst/tasknetol/blob/main/img/шарк.jpg)
